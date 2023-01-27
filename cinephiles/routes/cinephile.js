@@ -5,6 +5,11 @@ const cinephileController = require("../controllers/cinephileController")
 
 // Ruta base: localhost:3000/cinephile
 
+// Me dirige a UN CINEFILE SIN LOGUEAR
+// localhost:3000/cinephile/oneCinephileOnlyDetails/:cinephile_id
+router.get("/oneCinephileOnlyDetails/:cinephile_id", cinephileController.viewOneCinephileDetails);
+
+// me dirige a UN CINEFILO LOGUEADO
 // localhost:3000/cinephile/oneCinephile/:cinephile_id
 router.get("/oneCinephile/:cinephile_id", cinephileController.viewOneCinephile);
 
@@ -29,6 +34,7 @@ router.get("/edit/:cinephile_id", cinephileController.viewEditCinephile);
 // localhost:3000/cinephile/edit/:cinephile_id
 router.post("/edit/:cinephile_id", multer("cinephile"), cinephileController.edit);
 module.exports = router;
+
 
 
 module.exports = router;

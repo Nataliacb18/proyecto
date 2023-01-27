@@ -2,7 +2,7 @@ const connection = require("../config/db");
 const bcrypt = require("bcrypt");
 
 class CinephileController {
-  //   Muestra una vista con un cinéfilo y sus películas
+  //   Muestra una vista con un cinéfilo y sus películas logueado
   viewOneCinephile = (req, res) => {
     let cinephile_id = req.params.cinephile_id;
     let sql1 = `SELECT * FROM cinephile WHERE cinephile_id = ${cinephile_id} AND cinephile_deleted = 0;`;
@@ -12,6 +12,20 @@ class CinephileController {
       connection.query(sql2, (error2, resultFilm) => {
         if (error2) throw error2;
         res.render("oneCinephile", { resultCinephile, resultFilm });
+      });
+    });
+  };
+
+  // Muestra una vista con un cinéfilo y sus películas SIN logueado
+  viewOneCinephileDetails = (req, res) => {
+    let cinephile_id = req.params.cinephile_id;
+    let sql1 = `SELECT * FROM cinephile WHERE cinephile_id = ${cinephile_id} AND cinephile_deleted = 0;`;
+    let sql2 = `SELECT * FROM film WHERE cinephile_id = ${cinephile_id} AND film_deleted = 0;`;
+    connection.query(sql1, (error1, resultCinephile) => {
+      if (error1) throw error1;
+      connection.query(sql2, (error2, resultFilm) => {
+        if (error2) throw error2;
+        res.render("viewOnlyDetails", { resultCinephile, resultFilm });
       });
     });
   };
@@ -51,7 +65,8 @@ class CinephileController {
             throw error;
           }
         } else {
-          res.redirect("/");
+          console.log(result)
+          res.redirect(`/cinephile/oneCinephile/${result.insertId}`);
         }
       });
     });
@@ -74,9 +89,10 @@ class CinephileController {
 
         bcrypt.compare(password, hash, function (err, result) {
           if (err) throw err;
-
+          
           if (result) {
-            res.redirect(`/`);
+            res.redirect(`/cinephile/oneCinephile/${resultEmail[0].cinephile_id}`);
+            console.log(result, "ESTO ES EL RESULT");
           } else {
             res.render("login", {
               mensaje: "El e-mail y/o la contraseña son incorrectos",
@@ -166,6 +182,7 @@ class CinephileController {
       res.redirect(`/cinephile/oneCinephile/${cinephile_id}`);
     }
   };
+  
 }
 
 module.exports = new CinephileController();

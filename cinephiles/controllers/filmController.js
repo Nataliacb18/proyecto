@@ -80,6 +80,8 @@ class FilmController {
       res.redirect(`/cinephile/oneCinephile/${cinephile_id}`)
     })
   }
+
+
 }
 
 module.exports = new FilmController();
