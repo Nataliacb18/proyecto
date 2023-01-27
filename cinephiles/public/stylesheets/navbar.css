@@ -1,5 +1,35 @@
+.nav-navbar{
+    background: #f8f3ed69;
+    width: 100vw;
+}
 .img-nav{
-    width: 60px;
+    width: 65px;
     filter: brightness(1.1);
     mix-blend-mode: multiply;
+}
+.fontLogo{
+    font-family: 'Pacifico', cursive;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+}
+.lr{
+    padding-left: 40%;
+}
+.text{
+    padding-left: 20%;
+}
+.text-film{
+    padding-right: 35px !important;
+}
+.separacion{
+    border-left: 1px solid black !important;
+    margin: 5%;
+}
+.nav-link{
+    transition: color .6s;
+}
+.nav-link:hover{
+    color: rgba(255, 255, 255, 0.822);
+    
 }
