@@ -38,6 +38,25 @@
         </div>
         <% }) %>
       </section>
+      <section class="row">
+        <% resultFin.forEach(film => { %>
+        <div class="col-6 text-center d-flex justify-content-center mb-5">
+          <div class="card" style="width: 18rem">
+           <a href="/film"> <img
+              src="/images/film/<%= film.film_img %>"
+              class="card-img-top"
+              alt="..."
+            /></a>
+            <div class="card-body">
+              <h5 class="card-title"><%= film.title %></h5>
+              <a href="/cinephile/oneCinephileOnlyDetails/<%= film.cinephile_id %>" class="btn btn-primary">Mas info</a>
+              
+            </div>
+            
+          </div>
+        </div>
+        <% }) %>
+      </section>
     </main>
   </div>
 
