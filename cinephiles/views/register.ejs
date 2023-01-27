@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <h1 class="text-center">Formulario para registrarte</h1>
+    <main>
+      <form
+        action="/cinephile/register"
+        method="post"
+        enctype="multipart/form-data"
+        class="p-5"
+      >
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Introduzca nombre"
+          aria-label=".form-control-lg example"
+          name="name"
+        />
+        <br /><br />
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Introduzca apellidos"
+          aria-label=".form-control-lg example"
+          name="last_name"
+        />
+        <br /><br />
+        <input
+        class="form-control form-control-lg"
+        type="text"
+        placeholder="describa brevemente el cine que le gusta"
+        aria-label=".form-control-lg example"
+        name="cinephile_description"
+      />
+      <br><br>
+      <input
+      class="form-control form-control-lg"
+      type="text"
+      placeholder="introduzca teléfono"
+      aria-label=".form-control-lg example"
+      name="phone_number"
+    />
+    <br /><br />
+        <div>
+            <label for="img" class="form-label">Subir imagen</label>
+            <input class="form-control" type="file" name="img" id="img">
+        </div>
+        <br><br>
+        <input
+        class="form-control form-control-lg"
+        type="email"
+        placeholder="introduzca e-mail"
+        aria-label=".form-control-lg example"
+        name="email"
+      />
+        <br><br>
+        <input
+        class="form-control form-control-lg"
+        type="password"
+        placeholder="Introduzca contraseña"
+        aria-label=".form-control-lg example"
+        name="password"
+      />
+        <br /><br />
+        
+        <p class="text-danger"> <%= mensaje %></p>
+        <button class="btn btn-primary" type="submit">Registrar</button>
+      </form>
+    </main>
+  </body>
+</html>

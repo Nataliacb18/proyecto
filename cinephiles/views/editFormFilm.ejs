@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <h1 class="text-center">modificar</h1>
+    <main>
+      <form
+        action="/film/edit/<%= result[0].film_id %>/<%= result[0].cinephile_id %>"
+        method="post"
+        enctype="multipart/form-data"
+        class="p-5"
+      >
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Introduzca nombre"
+          aria-label=".form-control-lg example"
+          name="titulo"
+          value="<%= result[0].title %>"
+        />
+        <br /><br />
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Introduzca apellidos"
+          aria-label=".form-control-lg example"
+          name="description"
+          value="<%= result[0].film_description %>"
+        />
+        <br /><br />
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="describa brevemente el cine que le gusta"
+          aria-label=".form-control-lg example"
+          name="director"
+          value="<%= result[0].director %>"
+        />
+        <br /><br />
+
+        <div>
+          <label for="cinephile_img" class="form-label">Subir imagen</label>
+          <input class="form-control" type="file" name="img" id="img" />
+        </div>
+        <br /><br />
+
+        <button class="btn btn-primary" type="submit">editar</button>
+      </form>
+    </main>
+  </body>
+</html>

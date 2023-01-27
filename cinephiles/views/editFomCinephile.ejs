@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <h1 class="text-center">modificar</h1>
+    <main>
+      <form
+        action="/cinephile/edit/<%= result[0].cinephile_id %>"
+        method="post"
+        enctype="multipart/form-data"
+        class="p-5"
+      >
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Introduzca nombre"
+          aria-label=".form-control-lg example"
+          name="name"
+          value="<%= result[0].name %>"
+        />
+        <br /><br />
+        <input
+          class="form-control form-control-lg"
+          type="text"
+          placeholder="Introduzca apellidos"
+          aria-label=".form-control-lg example"
+          name="last_name"
+          value="<%= result[0].last_name %>"
+        />
+        <br /><br />
+        <input
+        class="form-control form-control-lg"
+        type="text"
+        placeholder="describa brevemente el cine que le gusta"
+        aria-label=".form-control-lg example"
+        name="cinephile_description"
+        value="<%= result[0].cinephile_description %>"
+      />
+      <br><br>
+      <input
+      class="form-control form-control-lg"
+      type="text"
+      placeholder="introduzca teléfono"
+      aria-label=".form-control-lg example"
+      name="phone_number"
+      value="<%= result[0].phone_number %>"
+    />
+    <br /><br />
+        <div>
+            <label for="cinephile_img" class="form-label">Subir imagen</label>
+            <input class="form-control" type="file" name="img" id="img">
+        </div>
+        <br><br>
+        <input
+        class="form-control form-control-lg"
+        type="email"
+        placeholder="introduzca e-mail"
+        aria-label=".form-control-lg example"
+        name="email"
+        value="<%= result[0].email %>"
+      />
+      
+        <br><br>
+         <input
+          class="form-control form-control-lg"
+          type="password"
+          placeholder="Introduce tu antigua contraseña"
+          aria-label=".form-control-lg example"
+          name="old_pass"
+        /><br /><br />
+        <input
+          class="form-control form-control-lg"
+          type="password"
+          placeholder="Introduce tu nueva contraseña"
+          aria-label=".form-control-lg example"
+          name="new_password" />
+          <p class="text-danger"> <%= mensaje %></p>
+
+        <button class="btn btn-primary" type="submit">Registrar</button>
+      </form>
+    </main>
+  </body>
+</html>

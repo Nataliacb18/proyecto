@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <%- include('navbar') %>
+
+  <h1>Esta es mi portada</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center">Todos los cinéfilos</h1>
+      </div>
+    </div>
+    <main>
+      <section class="row">
+        <% result.forEach(cinephile => { %>
+        <div class="col-6 text-center d-flex justify-content-center mb-5">
+          <div class="card" style="width: 18rem">
+           <a href="/film"> <img
+              src="/images/cinephile/<%= cinephile.cinephile_img %>"
+              class="card-img-top"
+              alt="..."
+            /></a>
+            <div class="card-body">
+              <h5 class="card-title"><%= cinephile.name %></h5>
+              <a href="/cinephile/oneCinephile/<%= cinephile.cinephile_id %>" class="btn btn-primary">Mas info</a>
+              
+            </div>
+            
+          </div>
+        </div>
+        <% }) %>
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>

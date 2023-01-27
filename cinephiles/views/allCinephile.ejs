@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Todos los cinéfilos</title>
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Todos los </h1>
+        </div>
+      </div>
+      <main>
+        <section class="row">
+          <% result.forEach(cinephile => { %>
+          <div class="col-6 text-center d-flex justify-content-center mb-5">
+            <div class="card" style="width: 18rem">
+             <a href="/film"> <img
+                src="/images/cinephile/<%= cinephile.cinephile_img %>"
+                class="card-img-top"
+                alt="..."
+              /></a>
+              <div class="card-body">
+                <h5 class="card-title"><%= cinephile.name %></h5>
+                <a href="/cinephile/oneCinephile/<%= cinephile.cinephile_id %>" class="btn btn-primary">Mas info</a>
+                <a href="/film/addFilm/<%= cinephile.cinephile_id %>" class="btn btn-primary">Añadir película</a>
+              </div>
+              
+            </div>
+          </div>
+          <% }) %>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

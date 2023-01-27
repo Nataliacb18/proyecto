@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Un cinéfilo</title>
+  </head>
+  <body>
+    <%- include('navbar') %>
+    
+        <!-- incluimos nuevo formulario -->
+        <section class="row">
+          <div class="col-12">
+            <h1 class="text-center">Crea película</h1>
+          </div>
+          <div class="col-12">
+            <form
+              action="/film/addFilm"
+              method="post"
+              enctype="multipart/form-data"
+              class="p-5"
+            >
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                placeholder="Título"
+                aria-label=".form-control-lg example"
+                name="title"
+              />
+              <br /><br />
+              <input
+                class="form-control form-control-lg"
+                type="text"
+                placeholder="Breve descripción"
+                aria-label=".form-control-lg example"
+                name="film_description"
+              />
+              <br><br>
+              <input
+              class="form-control form-control-lg"
+              type="text"
+              placeholder="director"
+              aria-label=".form-control-lg example"
+              name="director"
+            />
+              <br /><br />
+              <div>
+                <label for="formFileLg" class="form-label"
+                  >Introduce imagen</label
+                >
+                <input
+                  class="form-control form-control-lg"
+                  id="formFileLg"
+                  type="file"
+                  name="img"
+                />
+              </div>
+              <br /><br />
+              <select name="cinephile_id" id="" required>
+                <option value="">Selecciona cinéfilo</option>
+                <% result.forEach(cinephile => { %>
+                    <option value="<%= cinephile.cinephile_id%>"><%= cinephile.name%> </option>
+                    <% }) %>
+              </select>
+              <button class="btn bg-warning" type="submit">Guardar</button>
+            </form>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

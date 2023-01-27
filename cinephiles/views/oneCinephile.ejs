@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Un cinéfilo</title>
+  </head>
+  <body>
+    <%- include('navbar') %>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Vista de <%= resultCinephile[0].name %></h1>
+        </div>
+      </div>
+      <main>
+        <section class="row">
+          <div class="col-12 d-flex justify-content-center mb-5">
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/cinephile/<%= resultCinephile[0].cinephile_img %>"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title"><%= resultCinephile[0].name %></h5>
+                <h5 class="card-title"><%= resultCinephile[0].last_name %></h5>
+                <p><%= resultCinephile[0].cinephile_description %></p>
+                <p><%= resultCinephile[0].phone_number %></p>
+                <p><%= resultCinephile[0].email %></p>
+                <a
+                  href="/cinephile/deleted/<%= resultCinephile[0].cinephile_id %>"
+                  class="btn btn-warning"
+                  >Eliminar</a
+                >
+                <a
+                  href="/cinephile/edit/<%= resultCinephile[0].cinephile_id %>"
+                  class="btn btn-warning"
+                  >Editar</a
+                >
+                <a href="/film/addFilm" class="btn btn-primary">Añadir película</a>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <% resultFilm.forEach(film => { %>
+          <div class="col-6 text-center d-flex justify-content-center mb-5">
+            <div class="card" style="width: 18rem">
+              <img
+                src="/images/film/<%= film.film_img %>"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title"><%= film.title %></h5>
+                <p><%= film.film_description %></p>
+              </div>
+              <a
+                href="/film/deleted/<%= film.film_id %>/<%= film.cinephile_id %>"
+                class="btn btn-danger"
+                >Eliminar</a
+              >
+              <a href="/film/edit/<%= film.film_id %>/<%= film.cinephile_id %>"
+                ><button class="btn bg-warning" type="submit">editar</button>
+              </a>
+             
+            </div>
+          </div>
+
+          <% }) %>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
