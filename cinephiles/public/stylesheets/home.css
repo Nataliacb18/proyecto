@@ -45,8 +45,7 @@ header{
    align-items: center;
 }
 .section1 img{
-    box-shadow: 1px 4px 15px 0 rgba(138, 135, 135, 0.925);
-    /* border: 2px solid rgba(138, 135, 135, 0.925); */
+    box-shadow: 1px 4px 15px 0 rgba(0, 0, 0, 0.925);
     width: 70%;
 }
 .section2{
@@ -59,14 +58,13 @@ header{
     font-size: 50px;
     opacity: 0.7;
 }
-.section2 hr{
+hr{
     border: 4px solid white;
     width: 18vw;
     margin: 3vw auto;
     opacity: 0.7;
 }
   .card-persons{
-    
     position: relative;
     width: 350px;
     height: 390px;
@@ -109,7 +107,6 @@ header{
   transition: 0.5s;
   z-index: 1;
   }
-  
   .card-persons:hover .imgBx
   {
     bottom: 80px;
@@ -148,3 +145,50 @@ header{
     color: white;
     text-decoration: underline #fff;
   }
+  .section3{
+    font-family: 'Abril Fatface', cursive;
+    background: rgb(58, 58, 58);
+    width: 100%;
+  }
+  .favorita{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 6%;
+  }
+  .section3 h2{
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.644);
+  }
+  .play{
+    font-size: 56px !important;
+  }
+  .trailer:hover{
+    transform: scale(1, 1.2 );
+  }
+.div-img{
+    text-align: center;
+    margin: auto;
+}
+.img-trailer{
+    width: 33%;
+    box-shadow: 1px 4px 15px 0 rgba(0, 0, 0, 0.925);
+}
+.section4{
+    background-color: #000;
+}
+.films{
+    height: 423px;
+    
+}
+.card-film{
+    box-shadow: -6px 6px 15px 2px rgba(44, 44, 44, 0.925);
+}
+.card-film:hover{
+    outline: 2px solid  RGB(153,116,4);
+}
+.section4 h2{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 45px;
+    color: rgb(175, 168, 168);
+}

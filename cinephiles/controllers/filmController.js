@@ -35,7 +35,7 @@ class FilmController {
     });
   };
 
-  // Eliminar peli de manera lógica
+  // Eliminar peli de manera 
 
   deletedFilm = (req, res) =>{
     let {film_id, cinephile_id} = req.params;
