@@ -43,7 +43,37 @@
           <img src="/images/section1.jpg" alt="" />
         </div>
       </section>
-      <section class="row">
+
+      <section class="box row section2">
+        <div class="col-12">
+          <h2 class="text-center">Todos nuestros cinéfilos</h2>
+          <hr/>
+        </div>
+        <% result.forEach(cinephile => { %>
+
+        <div class="card-persons col-12">
+          <div class="imgBx">
+            <a href="/film">
+              <img
+                src="/images/cinephile/<%= cinephile.cinephile_img %>"
+                class="card-img-top"
+                alt="..."
+            /></a>
+          </div>
+          <div class="details">
+            <h2><%= cinephile.name %></h2>
+            <a
+              href="/cinephile/oneCinephileOnlyDetails/<%= cinephile.cinephile_id %>"
+              class="btn mas-info"
+              >Mas info</a
+            >
+          </div>
+        </div>
+
+        <% }) %>
+      </section>
+
+      <!-- <section class="row">
         <% result.forEach(cinephile => { %>
         <div class="col-6 text-center d-flex justify-content-center mb-5">
           <div class="card" style="width: 18rem">
@@ -64,7 +94,7 @@
           </div>
         </div>
         <% }) %>
-      </section>
+      </section> -->
       <section id="allFilms" class="row">
         <% resultFin.forEach(film => { %>
         <div class="col-6 text-center d-flex justify-content-center mb-5">
