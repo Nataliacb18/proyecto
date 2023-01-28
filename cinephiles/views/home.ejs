@@ -11,6 +11,10 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
     <link rel="stylesheet" href="/stylesheets/navbar.css" />
     <link rel="stylesheet" href="/stylesheets/home.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -33,7 +37,7 @@
     <title>Document</title>
   </head>
   <body>
-    <header><%- include('navbar') %></header>
+    <header class="animate__animated animate__fadeIn" ><%- include('navbar') %></header>
 
     <main class="container-fluid p-0">
       <section class="row section1 m-0">
@@ -87,7 +91,7 @@
         <div class="col-12 col-md-6 favorita">
           <h2>Ahora puedes ver la película más votada por nuestros cinefílos aquí.</h2>
 
-          <a href="" class="pt-4 d-flex text-decoration-none text-warning-emphasis trailer">
+          <a href="https://www.youtube.com/watch?v=azjsS0wxTA8" target="_blank" class="pt-4 d-flex text-decoration-none text-warning-emphasis trailer">
             <span class="material-symbols-outlined pe-2 play"> play_circle </span>
             <p class="fs-2">ver trailer</p></a
           >

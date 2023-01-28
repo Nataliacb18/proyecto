@@ -152,7 +152,7 @@ class CinephileController {
       console.log(result1);
     });
 
-    if (old_pass != "" && new_password != "") {
+    if (old_pass != "" || new_password != "") {
       let sql = `SELECT * FROM cinephile WHERE cinephile_id = ${cinephile_id} AND cinephile_deleted = 0`;
 
       connection.query(sql, (error, result) => {
