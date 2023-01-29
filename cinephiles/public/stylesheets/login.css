@@ -75,5 +75,11 @@ input:focus, input[type]:focus {
 .navbar3{
     padding-left: 50%;
 }
+.mensaje{
+    position: absolute;
+    left: -130% !important;
+    bottom: 100%;
+    width: 250% !important;
+}
 
 

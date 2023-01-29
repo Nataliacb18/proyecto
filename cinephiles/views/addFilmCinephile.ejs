@@ -52,11 +52,10 @@
           <div class="navbar-nav text"></div>
 
           <div class="navbar-nav lr">
-            <a class="nav-link fw-bold fs-5" href="/cinephile/register"
-              >Registro</a
+            <a class="nav-link fw-bold fs-5" href="/cinephile/oneCinephile/<%=cinephile_id %>"
+              >Volver</a
             >
-            <div class="separacion"></div>
-            <a class="nav-link fw-bold fs-5" href="/cinephile/login">Login</a>
+
           </div>
         </div>
       </div>
@@ -72,7 +71,7 @@
         </div>
         <div class="col-12 col-md-6 d-flex pt-5 f-register">
           <form
-            action="/film/addFilm"
+            action="/film/addFilmCinephile/<%=cinephile_id %>"
             method="post"
             enctype="multipart/form-data"
             class="p-5 section10-form"
@@ -113,14 +112,6 @@
               />
             </div>
             <br /><br />
-            <select name="cinephile_id" id="" required class="select">
-              <option value="">Selecciona cinéfilo</option>
-              <% result.forEach(cinephile => { %>
-              <option value="<%= cinephile.cinephile_id%>">
-                <%= cinephile.name%>
-              </option>
-              <% }) %>
-            </select>
             <button class="btn section10-btn" type="submit">Guardar</button>
           </form>
         </div>

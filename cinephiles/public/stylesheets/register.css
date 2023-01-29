@@ -1,6 +1,9 @@
 html{
     overflow-x: hidden;
 }
+.titulo a{
+    font-family: 'Pacifico', cursive !important;
+}
 .navbar2{
     background: rgba(44, 43, 43, 0.452);
 }

@@ -172,7 +172,7 @@ class CinephileController {
           } else {
             res.render("editFomCinephile", {
               result,
-              mensaje: "contraseña incorrecta",
+              mensaje: "Introduzca contraseña correcta",
             });
           }
         });

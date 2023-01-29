@@ -1,0 +1,53 @@
+.section8{
+    height: 89.2vh !important;
+}
+.section9-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #212529;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #fff;
+    position: absolute;
+    right: 9%;
+    bottom: 18%;
+}
+  .section9-btn:hover {
+    background: #212529;
+    color: white;
+  }
+  textarea {
+    resize: none !important;
+}
+.input1{
+    border: none !important;
+}
+.register1{
+    width: 40% !important;
+}
+.h2{
+    font-family: 'Abril Fatface', cursive;
+    color: white !important;
+    opacity: 0.7;
+    font-size: 50px !important;
+}
+.mensaje{
+    position: absolute;
+    right: 7.2%;
+    bottom: 25%;
+    width: 250px;
+}
+.nav-link{
+    transition: color .6s !important;
+}
+.nav-link:hover{
+    color: rgba(255, 255, 255, 0.822) !important;
+    
+}

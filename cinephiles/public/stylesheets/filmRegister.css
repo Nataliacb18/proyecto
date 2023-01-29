@@ -1,0 +1,56 @@
+html{
+    overflow-x: hidden;
+}
+.section10{
+    height: 89.2vh !important;
+}
+.navbar2{
+    background: rgba(44, 43, 43, 0.452);
+}
+.lr{
+    padding-left: 58% !important;
+}
+.section10{
+    background: rgba(27, 27, 27, 0.808);
+}
+.section10 h1{
+    font-size: 50px !important;
+    color: rgba(163, 159, 159, 0.808);
+     font-family: 'Abril Fatface', cursive;
+}
+.section10-img img{
+    width: 120%;
+}
+.section10-form{
+    background-color: rgb(41, 39, 39);
+    box-shadow: 1px 4px 15px 0 rgba(0, 0, 0, 0.925);
+    height: 90%;
+}
+.select{
+    width: 49%;
+    height: 11%;
+    border-radius: 9px;
+    padding-left: 10px;
+}
+
+.section10-btn {
+    margin-left: 30%;
+    color: 212529;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: white;
+}
+  .section10-btn:hover {
+    background: #212529;
+    color: white;
+  }
+  textarea:focus, input:focus, input[type]:focus {
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(224, 221, 8, 0.6) !important;
+    outline: 1px solid rgba(224, 220, 8, 0.568) !important;
+}
