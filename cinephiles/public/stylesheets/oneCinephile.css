@@ -1,0 +1,23 @@
+.navbar2{
+    background: rgba(44, 43, 43, 0.452);
+}
+.btns{
+    color: red;
+}
+.btns1, .btns3{
+    color: rgba(224, 221, 8, 0.6);
+}
+.btns2{
+    color: black;
+}
+.name{
+    font-size: 38px;
+    font-family: 'Abril Fatface', cursive;
+}
+.names{
+    font-size: 20px !important;
+    text-decoration: none;
+}
+.names:hover{
+    transform: scale(1.2); 
+}

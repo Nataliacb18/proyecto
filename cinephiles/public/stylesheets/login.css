@@ -1,0 +1,79 @@
+html{
+    overflow-x: hidden;
+}
+.navbar2{
+    background: rgba(44, 43, 43, 0.452);
+}
+.section9{
+    background: radial-gradient(circle, rgba(95,95,99,1) 0%, rgba(0,0,0,1) 64%);
+    height: 100vh;
+    padding: 5%;
+}
+.section9 h1{
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    opacity: 0.7;
+}
+.input2{
+    background-color: rgba(189, 180, 180, 0.61) !important;
+    border: none;
+    color: white;
+    width: 60%;
+    box-shadow: 1px 4px 15px 0 rgba(0, 0, 0, 0.925);
+}
+input:focus, input[type]:focus {
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(224, 221, 8, 0.6) !important;
+    outline: 1px solid rgba(224, 220, 8, 0.568) !important;
+}
+.input2::placeholder {
+    color: rgba(255, 255, 255, 0.61);
+}
+.right img{
+    padding-left: 20%;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 14% !important;
+}
+.btn-login {
+    min-width: 130px;
+    height: 40px;
+    width: 15%;
+    color: #212529;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #fff;
+}
+.btn-login:hover {
+    background: #212529;
+    color: white;
+}
+.register1{
+    text-decoration: none;
+    color: rgba(224, 221, 8, 0.6);
+}
+.div-boton{
+    position: absolute;
+    bottom: 20%;
+    left: 41.5%;
+}
+.div-boton p{
+    padding-top: 5%;
+    position: absolute;
+    width: 195%;
+    left: -88%;
+}
+.navbar3{
+    padding-left: 50%;
+}
+
+

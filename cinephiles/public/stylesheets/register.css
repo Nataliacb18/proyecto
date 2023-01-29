@@ -1,0 +1,75 @@
+html{
+    overflow-x: hidden;
+}
+.navbar2{
+    background: rgba(44, 43, 43, 0.452);
+}
+.section8{
+    background: radial-gradient(circle, rgba(95,95,99,1) 0%, rgba(0,0,0,1) 64%);
+    height: 100vh;
+}
+.section8 h1{
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+    opacity: 0.7;
+}
+.section8 form{
+    margin-bottom: 12%;
+}
+.register1{
+    width: 40%;
+}
+.input1{
+    background-color: rgba(189, 180, 180, 0.61) !important;
+    border: none;
+    color: white;
+    box-shadow: 1px 4px 15px 0 rgba(0, 0, 0, 0.925);
+}
+textarea:focus, input:focus, input[type]:focus {
+    box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(224, 221, 8, 0.6) !important;
+    outline: 1px solid rgba(224, 220, 8, 0.568) !important;
+}
+.input1::placeholder {
+    color: rgba(255, 255, 255, 0.61);
+}
+.register2{
+    padding-bottom: 1%;
+}
+.section8-btn {
+    min-width: 130px;
+    height: 40px;
+    color: #212529;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #212529;
+    background: #fff;
+    position: absolute;
+    right: 46%;
+    bottom: 12%;
+}
+  .section8-btn:hover {
+    background: #212529;
+    color: white;
+  }
+  textarea {
+    resize: none;
+}
+.mensaje{
+    position: absolute;
+    right: 5%;
+    bottom: 12%;
+    width: 250px;
+}
+.logueo{
+    text-decoration: none;
+    color: rgba(224, 221, 8, 0.6);
+}
+.logueo:hover{
+    text-decoration: underline;
+}

@@ -16,23 +16,17 @@
     />
     <link rel="stylesheet" href="/stylesheets/navbar.css" />
     <link rel="stylesheet" href="/stylesheets/oneCinephileDetails.css" />
+    <link rel="stylesheet" href="/stylesheets/oneCinephile.css" />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
   </head>
-  <body>
-    <nav class="navbar navbar-expand-lg" style="background-color: #e4ba87a4">
+  <body class="animate__animated animate__fadeIn">
+    <nav class="navbar navbar-expand-lg navbar2">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"
-          ><img
-            class="img-nav"
-            src="/images/logo.jpg"
-            alt=""
+          ><img class="img-nav" src="/images/logo.jpg" alt=""
         /></a>
         <button
           class="navbar-toggler"
@@ -45,28 +39,28 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="#"></a>
-
-            <a class="nav-link" href="/">Cerrar sesión</a>
-            <!-- quitar selector de añadir peliculas creando otra vista -->
-            <a href="/film/addFilm" class="btn btn-primary">Añadir película</a>
-            <h2 class=""><%= resultCinephile[0].name %></h2>
+        <div class="row collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="col-9">
+            <h2 class="name"><%= resultCinephile[0].name %></h2>
+          </div>
+          <div class="col-3 d-flex justify-content-evenly">
+            <a
+              href="/cinephile/deleted/<%= resultCinephile[0].cinephile_id %>"
+              class="names btns p-0"
+              >Eliminar cuenta
+            </a>
+            <a class="names btns2 ps-2" href="/">Cerrar sesión</a>
           </div>
         </div>
       </div>
     </nav>
 
-
-
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 col-md-6">
-        </div>
+        <div class="col-12 col-md-6"></div>
       </div>
       <main>
-        <section class="row section5">
+        <section class="row section5 ">
           <div class="col-12 col-md-6 d-flex justify-content-center">
             <div class="cinefilo-img">
               <img
@@ -75,16 +69,6 @@
                 alt="..."
               />
             </div>
-            <a
-                  href="/cinephile/deleted/<%= resultCinephile[0].cinephile_id %>"
-                  class="btn btn-warning"
-                  >Eliminar</a
-                >
-                <a
-                  href="/cinephile/edit/<%= resultCinephile[0].cinephile_id %>"
-                  class="btn btn-warning"
-                  >Editar</a
-                >
           </div>
           <div
             class="col-12 col-md-6 texto d-flex flex-column justify-content-center"
@@ -105,8 +89,16 @@
               <span class="material-symbols-outlined pe-2"> contact_mail </span>
               <p><%= resultCinephile[0].email %></p>
             </div>
+            <div class="">
+              <a
+                href="/cinephile/edit/<%= resultCinephile[0].cinephile_id %>"
+                class="btn btns1 ps-0"
+                >Editar</a
+              >
+              <a href="/film/addFilm" class="btn btns1">Añadir película</a>
+            </div>
           </div>
-          <img class="rollo" src="/images/rollo.png" alt="" />
+          <img class="rollo animate__animated animate__bounce" src="/images/rollo.png" alt="" />
         </section>
 
         <section class="row section6 p-5 d-flex justify-content-center">
@@ -126,23 +118,31 @@
                   <hr />
                   <div class="p-3">
                     <small class="text-secondary">Director:</small>
-                  <p class="card-text"><%= film.director %></p>
-                  <small class="text-secondary">Descripción:</small>
-                  <p class="card-text"><%= film.film_description %></p>
-                  </div>
-                  <a
-                  href="/film/deleted/<%= film.film_id %>/<%= film.cinephile_id %>"
-                  class="btn btn-danger"
-                  >Eliminar</a
-                >
-                <a href="/film/edit/<%= film.film_id %>/<%= film.cinephile_id %>"
-                  ><button class="btn bg-warning" type="submit">editar</button>
-                </a>
-                  <div class="d-flex justify-content-end pt-4">
-                    <span class="material-symbols-outlined pe-2 play">
-                    play_circle
-                  </span>
-                  <p>Trailer</p>
+                    <p class="card-text"><%= film.director %></p>
+                    <small class="text-secondary">Descripción:</small>
+                    <p class="card-text"><%= film.film_description %></p>
+                    <div class="d-flex justify-content-between pt-2">
+                      <div class="d-flex aling-items-center">
+                        <a
+                          href="/film/edit/<%= film.film_id %>/<%= film.cinephile_id %>"
+                          class="btns3 names p-0 pe-3"
+                          type="submit"
+                        >
+                          Editar
+                        </a>
+                        <a
+                          href="/film/deleted/<%= film.film_id %>/<%= film.cinephile_id %>"
+                          class="btns names"
+                          >Eliminar</a
+                        >
+                      </div>
+                      <div class="d-flex justify-content-end pt-0">
+                        <span class="material-symbols-outlined pe-2 play">
+                          play_circle
+                        </span>
+                        <p>Trailer</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -160,4 +160,3 @@
     ></script>
   </body>
 </html>
-

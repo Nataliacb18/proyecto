@@ -60,7 +60,7 @@ class CinephileController {
       connection.query(sql, (error, result) => {
         if (error) {
           if (error.code == "ER_DUP_ENTRY") {
-            res.render("register", { mensaje: "Este e-mail ya existe" });
+            res.render("register", { mensaje: "Este e-mail está registrado" });
           } else {
             throw error;
           }
