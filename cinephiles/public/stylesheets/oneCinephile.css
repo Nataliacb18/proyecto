@@ -76,4 +76,13 @@
     .play{
         padding-top: 4px;
     }
+    .movilnav{
+        display: flex none !important;
+        width: 84%;
+        flex-direction: column;
+        padding-left: 29%;
+    }
+    .section6-movil{
+        height: 92vh;
+    }
 }

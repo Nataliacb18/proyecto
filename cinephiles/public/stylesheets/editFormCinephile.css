@@ -49,5 +49,26 @@
 }
 .nav-link:hover{
     color: rgba(255, 255, 255, 0.822) !important;
-    
+}
+
+
+
+
+
+
+
+
+/* Móvil */
+@media (max-width: 700px){
+    .movilnav{
+        width: 0 !important;
+        display: flex none !important;
+        width: 70% !important;
+        padding-left: 25% !important;
+    }
+    .volver{
+        padding-left: 6% !important;
+    }
+
+
 }
