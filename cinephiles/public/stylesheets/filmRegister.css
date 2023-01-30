@@ -54,3 +54,46 @@ html{
     box-shadow: 0 1px 1px rgba(229, 103, 23, 0.075)inset, 0 0 8px rgba(224, 221, 8, 0.6) !important;
     outline: 1px solid rgba(224, 220, 8, 0.568) !important;
 }
+
+
+
+/* Móvil */
+@media (max-width: 700px){
+
+    html{
+        overflow-x: hidden;
+    }
+    .lr{
+    padding-left: 40% !important;
+    }
+    .separacion{
+    margin: 0;
+    }
+    .filmLogin{
+    padding-left: 5%;
+    }
+    .section10{
+    height: 124vh !important;
+    }
+    .f-register{
+    padding: 0;
+    }
+    .section10-form{
+    height: 100% !important;
+    }
+    .section10-btn{
+    position: absolute !important;
+    left: 32% !important;
+    bottom: -30% !important;
+    width: 26% !important;
+    height: 5.5% !important;
+    }
+    .fontLogo{
+        padding-right: 14%;
+    }
+    .img-nav{
+        margin-left: -27%;
+    }
+}
+
+

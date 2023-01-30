@@ -83,3 +83,60 @@ input:focus, input[type]:focus {
 }
 
 
+
+@media (max-width: 700px){
+
+    .left{
+    position: absolute;
+    right: 11%;
+    width: 135%;
+    padding: 0;
+    top: 22%;
+    }
+    .input2{
+    width: 75%;
+    }
+    .div-boton{
+    position: absolute;
+    bottom: -17%;
+    left: 65%;
+    }
+    .login-img{
+    width: 100%;
+    position: absolute;
+    bottom: 4%;
+    right: 7%;
+    }
+    .text{
+    padding-left: 20%;
+    }
+    .media-login{
+    padding-left: 13%;
+    }
+    .navbar3{
+    flex-direction: row;
+    padding-left: 28% !important;
+    }
+    .lr{
+    padding-left: 29% !important;
+    }
+    .nav-login{
+        padding: 0;
+        padding-right: 4% !important;
+    }
+    .nav-login2{
+    padding: 0;
+    padding-left: 4%;
+    }
+    .separacion{
+        margin: 2% !important;
+    }
+    .section9{
+        margin: 0;
+    }
+}
+
+
+
+
+

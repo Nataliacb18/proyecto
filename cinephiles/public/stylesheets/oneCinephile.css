@@ -12,7 +12,8 @@
 }
 .name{
     font-size: 38px;
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Pacifico', cursive;
+    margin-left: 47%;
 }
 .names{
     font-size: 20px !important;
@@ -20,4 +21,59 @@
 }
 .names:hover{
     transform: scale(1.2); 
+}
+
+
+
+/* Móvil */
+@media (max-width: 700px){
+    .img-nav{
+        display: none;
+    }
+    .name{
+        display: none;
+    }
+    .container1{
+        justify-content: end;
+    }
+    .center{
+        justify-content: center;
+    }
+    .center1{
+        padding-top: 5% !important;
+    }
+    .rollo{
+        padding-top: 10% !important;
+        width: 70% !important;
+        margin-left: 16% !important;
+    }
+    .eda{
+        padding-top: 3%;
+        padding-left: 8%;
+    }
+    .btns1{
+        font-size: 20px;
+    }
+    .btns1-edit{
+        padding-left: 0 !important;
+    }
+    .card{
+        height: 71vh;
+    }
+    .display{
+        flex-direction: column;
+    }
+    .separacion1{
+        justify-content: inherit;
+    }
+    .trailer2{
+    padding-top: 8px !important;
+    position: absolute;
+    top: 92%;
+    left: 32%;
+    font-size: 20px;
+    }
+    .play{
+        padding-top: 4px;
+    }
 }

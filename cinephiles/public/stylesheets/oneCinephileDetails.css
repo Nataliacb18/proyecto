@@ -44,3 +44,41 @@ html {
     margin: 2px auto;
     opacity: 0.7;
 }
+
+ 
+/* Movil */
+@media (max-width: 700px){
+    .text{
+        padding-left: 34%;
+      }
+      .text-film{
+        padding-left: 7px;
+      }
+      .media-home{
+        padding-bottom: 0;
+      }
+      .separacion{
+        margin-bottom: 0;
+      }
+      .media-home1{
+        padding-left: 10px;
+      }
+      .cinefilo-img img {
+        width: 68vw;
+        height: 74vw;
+      }
+      .texto{
+        padding-top: 15px;
+        text-align: center;
+      }
+      .details-media{
+        padding-top: 10px !important;
+        justify-content: center;
+      }
+      .details-media1{
+        justify-content: center;
+      }
+      .rollo{
+        position: revert !important;
+      }
+}

@@ -76,3 +76,50 @@ textarea:focus, input:focus, input[type]:focus {
 .logueo:hover{
     text-decoration: underline;
 }
+
+
+
+/* Movil */
+@media (max-width: 700px){
+    .section8{
+        height: 120vh;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+    .section8 h1{
+        padding-top: 11%;
+    }
+    .register1{
+        width: 78%;
+    }
+    .register2{
+        position: absolute;
+    top: 27%;
+    }
+    .register3{
+        position: absolute;
+        top: 70%;
+    }
+    .section8-btn{
+        position: absolute;
+    top: 112%;
+    right: 2%;
+    }
+    .section8-msn{
+        position: absolute;
+    top: 122%;
+    }
+    .separacion{
+        margin: 0;
+    }
+    .media-home{
+        margin-left: 39px;
+    }
+    .media-home1{
+        padding-left: 10px !important;
+    }
+    .media-home2{
+        padding-left: 30px !important;
+    }
+
+}

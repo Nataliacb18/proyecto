@@ -192,3 +192,60 @@ hr{
     font-size: 45px;
     color: rgb(175, 168, 168);
 }
+
+
+
+/* Movil */
+@media (max-width: 700px) {
+  header{
+    background-image: url(../images/portada-movil.png);
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+  }
+  .fontLogo{
+    padding-right: 19%;
+  }
+  .text{
+    padding-left: 34%;
+  }
+  .text-film{
+    padding-left: 7px;
+  }
+  .media-home{
+    padding-bottom: 0;
+  }
+  .separacion{
+    margin-bottom: 0;
+  }
+  .media-home1{
+    padding-left: 10px;
+  }
+  .section1{
+    height: 50vh;
+  }
+  .section1 h2{
+    font-size: 5vw;
+  }
+  .div-img{
+    padding-top: 8%;
+    padding-bottom: 5%;
+  }
+  .img-trailer {
+    width: 50%;
+  }
+  .section4{
+    margin: 0;
+  }
+  .section2{
+    margin: 0 !important;
+  }
+  .navbarLogin{
+    padding-left: 4%;
+  }
+  .iconnav{
+    padding-left: 0 !important;
+  }
+}
